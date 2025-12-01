@@ -5,7 +5,7 @@
 groups = ["default", "dev"]
 strategy = ["inherit_metadata"]
 lock_version = "4.5.0"
-content_hash = "sha256:847dcd478913958225e89f8b45c975345ae45e67a82cc3c947de43c957a1caf7"
+content_hash = "sha256:4fb720f42398cf590d1eb68623cf7175c20ea2ac683705e290953fca4cbe85c2"
 
 [[metadata.targets]]
 requires_python = ">=3.10"
@@ -332,7 +332,7 @@ files = [
 
 [[package]]
 name = "cloudinary"
-version = "1.41.0"
+version = "1.44.1"
 summary = "Python and Django SDK for Cloudinary"
 groups = ["default"]
 dependencies = [
@@ -341,7 +341,8 @@ dependencies = [
     "urllib3>=1.26.5",
 ]
 files = [
-    {file = "cloudinary-1.41.0.tar.gz", hash = "sha256:e189739a796a7d2ad15c19971741d33a9300816b16c0282b4b14ccf1dd2948c0"},
+    {file = "cloudinary-1.44.1-py3-none-any.whl", hash = "sha256:b4785031179a5ec7010f46665e5c8fad2cae022c18405546f01d257e02f78b1c"},
+    {file = "cloudinary-1.44.1.tar.gz", hash = "sha256:62d4374b79d5476de2a86cb6a1da709a5429e02aef474bfc5d99f3e38a1a62ff"},
 ]
 
 [[package]]
