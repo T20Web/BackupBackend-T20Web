@@ -30,4 +30,5 @@ urlpatterns = [
     ),
     # API
     path('api/', include(router.urls)),
+    path('api/auth/', include('core.urls')),
 ]
