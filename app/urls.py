@@ -13,7 +13,6 @@ from fichas.views import FichaViewSet
 
 router = DefaultRouter()
 router.register(r'usuarios', UserViewSet, basename='usuarios')
-router.register(r'fichas', FichaViewSet, basename='fichas')
 urlpatterns = [
     path('admin/', admin.site.urls),
     # OpenAPI 3
@@ -31,4 +30,6 @@ urlpatterns = [
     # API
     path('api/', include(router.urls)),
     path('api/auth/', include('core.urls')),
+    path("api/", include("core.urls")),
+    path("api/", include("fichas.urls")),
 ]

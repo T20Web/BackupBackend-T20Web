@@ -1,10 +1,9 @@
-from rest_framework.serializers import ModelSerializer
-
+from rest_framework import serializers
 from core.models import User
 
+class UserSerializer(serializers.ModelSerializer):
+    password = serializers.CharField(write_only=True, min_length=8)
 
-class UserSerializer(ModelSerializer):
     class Meta:
         model = User
-        fields = '__all__'
-        depth = 1
+        fields = ("id", "name", "email", "password")

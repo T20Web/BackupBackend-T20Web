@@ -1,10 +1,12 @@
-from django.urls import path
-from rest_framework_simplejwt.views import TokenObtainPairView, TokenRefreshView
+from django.urls import path, include
+from rest_framework.routers import DefaultRouter
+from fichas.views.ficha_viewset import FichaViewSet
 
-from app.views import RegisterView
+# Configura o router para o FichaViewSet
+router = DefaultRouter()
+router.register(r"fichas", FichaViewSet, basename="fichas")
 
+# Rotas principais
 urlpatterns = [
-    path('register/', RegisterView.as_view(), name='register'),
-    path('login/', TokenObtainPairView.as_view(), name='login'),
-    path('refresh/', TokenRefreshView.as_view(), name='token_refresh'),
+    path("", include(router.urls)),  # inclui todas as rotas do FichaViewSet
 ]
